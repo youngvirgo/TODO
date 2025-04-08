@@ -14,6 +14,7 @@ const addTodo = (todo) => {
     newTodo.className = 'todo';
     newTodo.innerHTML = `
       <li>${inputValue}</li>
+      <i class="fa-solid fa-check check"></i>
       <i class="fa-solid fa-xmark delete"></i>
   `;
     todoList.appendChild(newTodo);
@@ -31,5 +32,16 @@ const deleteTodo = (e) => {
   }
 };
 
+const completedTodo = (e) => {
+  const todoo = e.target;
+
+  if (todoo.classList.contains('check')) {
+    todoo.parentElement.remove();
+    alert('todo Completed');
+  }
+};
+
 form.addEventListener('submit', addTodo);
 todoList.addEventListener('click', deleteTodo);
+todoList.addEventListener('click', completedTodo);
+

@@ -70,9 +70,21 @@ input[type='text'] {
   border-radius: 0.3rem;
   margin-bottom: 0.3rem;
 }
-
+.check{
+  font-size: 1.3rem;
+  cursor: pointer;
+  position: relative;left: 90px;
+}
 .delete {
   font-size: 1.3rem;
   cursor: pointer;
 }
+#Todocon{
+  width: 150px;height: 25px;
+  position: relative;right: 23px;cursor: pointer;
+}
 
+#completedcon{
+  width: 150px;height: 25px;
+  position: relative;left: 23px;cursor: pointer;
+}
